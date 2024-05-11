@@ -1,0 +1,16 @@
+Step1: create network and route file
+
+python randomTrips.py -n network.net.xml -r routes.rou.xml -e 500
+
+Step2: Set Configuration file.
+
+<input>
+<net-file value='maps/city1.net.xml'/> <route-files value='maps/city1.rou.xml'/>
+
+Step3: Train the model.
+
+python train.py --train -e 50 -m model_name -s 500
+
+Step4: Running trained model.
+
+python train.py -m model_name -s 500
